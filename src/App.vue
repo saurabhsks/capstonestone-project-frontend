@@ -1,26 +1,81 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+  <!-- <NavBar />
+  <HeaDer/>
+  <div className="homeContainer">
+  <FeatuRed/>
+  <h1 className="homeTitle">Browse by property type</h1>
+ 
+  <PropertyList/>
+  <h1 className="homeTitle">Hotels & Restaurent</h1>
+
+  <FeaturedProperties/>
+</div>
+  <MailList/>
+  <FooTer/> -->
+  
+  
+  <!-- <router-link to="/searchitem">SearchItem</router-link> -->
+
+  <div id="App">
+
+    <router-view></router-view>
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+// import NavBar from './components/NavBar.vue'
+// import HeaDer from './components/HeaDer.vue'
+// import FeatuRed from './components/FeatuRed.vue'
+// import PropertyList from './components/PropertyList.vue'
+// import FeaturedProperties from './components/FeaturedProperties.vue'
+// import MailList from './components/MailList.vue'
+// import FooTer from './components/FooTer.vue'
+// import SignUp from './components/SignUp.vue'
+// import LogIn from './components/LogIn.vue'
+// import HoTel from './HoTel.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  // components: {
+  //  NavBar,
+  //  HeaDer,
+  //  FeatuRed,
+  //  PropertyList,
+  //  FeaturedProperties,
+  //  MailList,
+  //  FooTer
+  // //  SignUp,
+  // //  LogIn,
+  // //  HoTel
+  
+  // }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import './assets/External/@fortawesome/fontawesome-free/css/all.min.css';
+
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+ * {
+  font-family: 'Nunito', sans-serif;
+ }
+
+/* .homeContainer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
+
+.homeTitle{
+  width: 1024px;
+  font-size: 20px;
+  align-items: center;
+} */
+
 </style>
