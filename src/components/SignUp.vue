@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "SignUp",
   data() {
@@ -27,20 +27,31 @@ export default {
   },
   methods: {
     async signup() {
-      console.log(this.username, this.email,this.password);
+      console.log(this.username, this.email, this.password);
 
-        //if(this.username && this.email &&)
+      if (this.username && this.email && this.password) {
 
-      const newuser = {
-        username: this.username,
-        email:this.email,
-        password: this.password,
-
-      };
-      const result = await axios.post("http://localhost:5000/auth/register", newuser);
-      console.log("Result is *****");
-      console.log(result);
-      this.$router.push({ path: "/login", replace: true });
+        if(this.password.length >=4 && this.password.length <=12){
+            const newuser = {
+          username: this.username,
+          email: this.email,
+          password: this.password,
+        };
+        const result = await axios.post(
+          "http://localhost:5000/auth/register",
+          newuser
+        );
+        console.log("Result is *****");
+        console.log(result);
+        this.$router.push({ path: "/login", replace: true });
+        }
+        else{
+            console.log("Please enter valid password");
+        }
+        
+      } else {
+        console.log("Enter valid data");
+      }
     },
   },
 };

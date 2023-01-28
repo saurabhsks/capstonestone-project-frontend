@@ -25,14 +25,25 @@ export default {
   methods: {
     async login() {
       console.log(this.username, this.password);
-      const user = {
-        username: this.username,
-        password: this.password,
-      };
-      const result = await axios.post("http://localhost:5000/auth/login", user);
-      console.log("Result is *****");
-      console.log(result);
-      this.$router.push({ path: "/", replace: true });
+      if (this.username && this.password) {
+        if (this.password.length >= 4 && this.password.length <= 12) {
+          const user = {
+            username: this.username,
+            password: this.password,
+          };
+          const result = await axios.post(
+            "http://localhost:5000/auth/login",
+            user
+          );
+          console.log("Result is *****");
+          console.log(result);
+          this.$router.push({ path: "/", replace: true });
+        } else {
+          console.log("Pasword or username is incorrect");
+        }
+      } else {
+        console.log("Please enter valid data");
+      }
     },
   },
 };
