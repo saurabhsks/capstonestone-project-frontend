@@ -35,7 +35,7 @@ export default {
             "http://localhost:5000/auth/login",
             user
           );
-          console.log("Result is *****");
+          console.log("you are logged in");
           console.log(result);
           this.$router.push({ path: "/", replace: true });
         } else {

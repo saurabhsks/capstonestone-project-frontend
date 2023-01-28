@@ -120,7 +120,10 @@ export default {
   cursor: pointer;
   text-align: left;
 }
-
+.headerBtn:hover{
+  background-color: black;
+  border: 2px solid white;
+}
 .headerBtn {
   background-color: #0071c2;
   color: white;

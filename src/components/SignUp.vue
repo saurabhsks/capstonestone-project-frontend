@@ -9,7 +9,7 @@
       placeholder="Enter Password"
     /><br />
     <div class="btn">
-      <button v-on:click="signup()">Sign Up</button>
+      <button className="hover" v-on:click="signup()">Sign Up</button>
     </div>
   </div>
 </template>
@@ -90,4 +90,5 @@ export default {
   cursor: pointer;
   font-weight: bold;
 }
+
 </style>
