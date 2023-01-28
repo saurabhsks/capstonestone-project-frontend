@@ -5,6 +5,7 @@ import SearchItem from './components/SearchItem.vue'
 import SignUp from './components/SignUp.vue'
 import LogIn from './components/LogIn.vue'
 import HomePage from './HomePage.vue'
+import HotelPage from './HotelPage.vue'
 const routes=[
     // {
     //     name:'App',
@@ -37,6 +38,11 @@ const routes=[
         name:'Login',
         component:LogIn,
         path:'/login'
+    },
+    {
+        name:'HotelPage',
+        component:HotelPage,
+        path:'/hotelpage'
     }
         
 ];
