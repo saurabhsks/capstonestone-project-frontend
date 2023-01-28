@@ -68,7 +68,7 @@
                 />
               </div>
 
-              <button @click="inputData()" className="btnSearch">Search</button>
+              <button @click="hotelByCity()" className="btnSearch">Search</button>
             </div>
           </div>
         </div>
@@ -102,6 +102,18 @@ export default {
         console.log(e);
       }
     },
+
+    async hotelByCity() {
+      try {
+        //http://localhost:5000/auth/login
+        const res = await axios.get(`http://localhost:5000/hotels/city/${this.destination}`);
+        console.log("Hotels by city *******");
+        console.log(res.data.data);
+        this.doc = res.data.data;
+      } catch (e) {
+        console.log(e);
+      }
+    },
   },
   components: {
     NavBar,
@@ -111,6 +123,7 @@ export default {
   data() {
     return {
       doc: [],
+      destination : ''
     };
   },
   // methods: {

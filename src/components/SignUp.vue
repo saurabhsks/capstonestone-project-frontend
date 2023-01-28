@@ -28,6 +28,9 @@ export default {
   methods: {
     async signup() {
       console.log(this.username, this.email,this.password);
+
+        //if(this.username && this.email &&)
+
       const newuser = {
         username: this.username,
         email:this.email,
