@@ -96,8 +96,13 @@ export default {
       try {
         //http://localhost:5000/auth/login
         const res = await axios.get(`http://localhost:5000/hotels/city`);
-        console.log(res.data.data);
+        console.log(res.data.data[0].name);
+        console.log(res.data.data[0].city);
+        console.log(res.data.data[0].address);
+        console.log(res.data.data[0].cheapestPrice);
         this.doc = res.data.data;
+        console.log("************");
+        console.log(this.doc.target);
       } catch (e) {
         console.log(e);
       }
@@ -106,6 +111,8 @@ export default {
     async hotelByCity() {
       try {
         //http://localhost:5000/auth/login
+        localStorage.setItem('rooms',this.rooms);
+      console.log("No of rooms : " ,this.rooms);
         const res = await axios.get(`http://localhost:5000/hotels/city/${this.destination}`);
         console.log("Hotels by city *******");
         console.log(res.data.data);
@@ -123,7 +130,8 @@ export default {
   data() {
     return {
       doc: [],
-      destination : ''
+      destination : '',
+      rooms:''
     };
   },
   // methods: {

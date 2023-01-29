@@ -30,7 +30,7 @@
       <div className="siDetailTexts">
         <span className="siPrice">${{item.cheapestPrice}}</span>
         <span className="siTaxOp">Includes taxes and fees</span>
-        <button className="siCheckButton">See availability</button>
+        <button @click="seeRooms($event)" className="siCheckButton">See availability</button>
       </div>
     </div>
   </div>
@@ -42,6 +42,22 @@ export default {
   props: {
     item: Array,
   },
+  methods:{
+     seeRooms(){
+      console.log("**** Event clicking on see availaility ***");
+      console.log(this.item.name);
+      console.log(this.item.address);
+      console.log(this.item.cheapestPrice);
+      console.log(this.item.distance);
+      console.log(this.item._id);
+      localStorage.setItem('name',this.item.name);
+      localStorage.setItem('address',this.item.address);
+      localStorage.setItem('cheapestPrice',this.item.cheapestPrice);
+      localStorage.setItem('distance',this.item.distance);
+      localStorage.setItem('_id',this.item._id);
+      this.$router.push({ path: "/hotelpage", replace: true });
+    }
+  }
 };
 </script>
 
