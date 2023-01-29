@@ -131,7 +131,7 @@
               excellent location score of 9.8!
             </span>
             <h2>${{ cheapestPrice }}</h2>
-            <button @click="bookNow()" >Reserve or Book Now!</button>
+            <button @click="bookNow()" className="rbtn" >Reserve or Book Now!</button>
           </div>
         </div>
       </div>
@@ -311,5 +311,9 @@ export default {
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
+}
+.rbtn :hover{
+    background-color: black;
+    border: 2px solid white;
 }
 </style>

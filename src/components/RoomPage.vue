@@ -84,4 +84,15 @@ export default {
   width: 20px;
   height: 20px;
 }
+.reservebtn{
+    border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width:64vh;
+  font-size: larger;
+}
 </style>
