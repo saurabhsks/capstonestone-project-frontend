@@ -1,7 +1,7 @@
 import {createWebHistory,createRouter} from 'vue-router'
 //import App from './App.vue'
 import ListBar from './ListBar.vue'
-import SearchItem from './components/SearchItem.vue'
+// import SearchItem from './components/SearchItem.vue'
 import SignUp from './components/SignUp.vue'
 import LogIn from './components/LogIn.vue'
 import HomePage from './HomePage.vue'
@@ -24,12 +24,12 @@ const routes=[
         path:'/listbar',
         
     },
-    {
-        name:'SearchItem',
-        component:SearchItem,
-        path:'/searchitem'
+    // {
+    //     name:'SearchItem',
+    //     component:SearchItem,
+    //     path:'/searchitem'
        
-    },
+    // },
     {
         name:'SignUp',
         component:SignUp,
