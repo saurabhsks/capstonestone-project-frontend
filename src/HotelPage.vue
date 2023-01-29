@@ -142,6 +142,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import NavBar from "./components/NavBar.vue";
 import MailList from "./components/MailList.vue";
 import FooTer from "./components/FooTer.vue";
@@ -162,7 +163,7 @@ export default {
     };
   },
   methods: {
-    currentHotel() {
+    async currentHotel() {
       this.success = false;
       const rooms = localStorage.getItem('rooms');
       console.log("Number of rooms in hotelPage from localStorage : ",rooms);
@@ -172,7 +173,20 @@ export default {
         this.distance = localStorage.getItem("distance");
         this.cheapestPrice = rooms * localStorage.getItem("cheapestPrice");
       }, 400);
-    },
+      
+      const _id = localStorage.getItem('_id');
+      const result = await axios.get(`http://localhost:5000/hotels/room/${_id}`);
+      console.log(result.data[0]);
+      const title= result.data[0].title;
+      const desc= result.data[0].desc;
+      const maxPeople= result.data[0].maxPeople;
+      const price= result.data[0].title.price;
+      localStorage.setItem('title' , title);
+      localStorage.setItem('desc' , desc);
+      localStorage.setItem('maxPeople' , maxPeople);
+      localStorage.setItem('price' , price);
+
+    },  
 
     bookNow(){
         this.$router.push({ path: "/login", replace: true });

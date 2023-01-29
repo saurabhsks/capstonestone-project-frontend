@@ -6,6 +6,7 @@ import SignUp from './components/SignUp.vue'
 import LogIn from './components/LogIn.vue'
 import HomePage from './HomePage.vue'
 import HotelPage from './HotelPage.vue'
+import RoomPage from './components/RoomPage.vue'
 const routes=[
     // {
     //     name:'App',
@@ -43,6 +44,11 @@ const routes=[
         name:'HotelPage',
         component:HotelPage,
         path:'/hotelpage'
+    },
+    {
+        name:'RoomPage',
+        component:RoomPage,
+        path:'/roompage'
     }
         
 ];

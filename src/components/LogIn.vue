@@ -37,7 +37,7 @@ export default {
           );
           console.log("you are logged in");
           console.log(result);
-          this.$router.push({ path: "/", replace: true });
+          this.$router.push({ path: "/roompage", replace: true });
         } else {
           console.log("Pasword or username is incorrect");
         }
