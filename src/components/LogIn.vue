@@ -34,7 +34,7 @@ export default {
             password: this.password,
           };
           const result = await axios.post(
-            "http://localhost:5000/auth/login",
+            "https://saurabhbookingapp.onrender.com/auth/login",
             user
           );
           console.log("you are logged in");

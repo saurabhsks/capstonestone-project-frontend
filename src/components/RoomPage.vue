@@ -91,13 +91,24 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  width: 30vw;
+  background: rgba(6, 6, 6, 0.5);
+  width: 32%;
+  font-size:18px;
+  border-radius: 10px;
+  border:1px solid rgba(255,255,255,0.3);
+  box-shadow:2px 2px 15px
+  rgba(0,0,0,0.3);
+  color:#fff;
+  padding-left: 6%;
+  padding-right: 6%;
+  
+
 }
 
 .checkBox1 {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .reservebtn {
   border: none;

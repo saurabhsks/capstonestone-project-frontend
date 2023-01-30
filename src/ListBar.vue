@@ -95,7 +95,7 @@ export default {
     async getAllhotels() {
       try {
         //http://localhost:5000/auth/login
-        const res = await axios.get(`http://localhost:5000/hotels/city`);
+        const res = await axios.get(`https://saurabhbookingapp.onrender.com/hotels/city`);
         console.log(res.data.data[0].name);
         console.log(res.data.data[0].city);
         console.log(res.data.data[0].address);
@@ -113,7 +113,7 @@ export default {
         //http://localhost:5000/auth/login
         localStorage.setItem('rooms',this.rooms);
       console.log("No of rooms : " ,this.rooms);
-        const res = await axios.get(`http://localhost:5000/hotels/city/${this.destination}`);
+        const res = await axios.get(`https://saurabhbookingapp.onrender.com/hotels/city/${this.destination}`);
         console.log("Hotels by city *******");
         console.log(res.data.data);
         this.doc = res.data.data;

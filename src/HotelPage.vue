@@ -175,7 +175,7 @@ export default {
       }, 400);
       
       const _id = localStorage.getItem('_id');
-      const result = await axios.get(`http://localhost:5000/hotels/room/${_id}`);
+      const result = await axios.get(`https://saurabhbookingapp.onrender.com/hotels/room/${_id}`);
       console.log("Data clicking on current hotel function *****");
     //   console.log(result.data);
       const hotelRooms = result.data;

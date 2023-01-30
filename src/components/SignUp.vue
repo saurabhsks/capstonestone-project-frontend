@@ -1,5 +1,6 @@
 <template>
     <div class="signupbg">
+        <div className="style">
   <h1 style="text-align: center">SignUp</h1>
   <div class="register">
     <input type="text" v-model="username" placeholder="Enter UserName" /><br />
@@ -13,6 +14,7 @@
       <button className="hover" v-on:click="signup()">Sign Up</button>
     </div>
   </div>
+</div>
 </div>
 </template>
 
@@ -40,7 +42,8 @@ export default {
           password: this.password,
         };
         const result = await axios.post(
-          "http://localhost:5000/auth/register",
+          "https://saurabhbookingapp.onrender.com/auth/register",
+         // "http://localhost:5000/auth/register",
           newuser
         );
         console.log("Result is *****");
@@ -103,5 +106,18 @@ export default {
     background-color: black;
     border: 2px solid white;
     color: #fff;
+}
+.style{
+    background: rgba(6, 6, 6, 0.5);
+  
+  font-size:18px;
+  border-radius: 10px;
+  border:1px solid rgba(255,255,255,0.3);
+  box-shadow:2px 2px 15px
+  rgba(0,0,0,0.3);
+  color:#fff;
+  padding-top: 5%;
+  padding-bottom:5%
+  
 }
 </style>
