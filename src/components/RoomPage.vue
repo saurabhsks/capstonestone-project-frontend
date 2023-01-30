@@ -1,42 +1,19 @@
 <template>
   <div className="page">
     <div className="roomPage">
-        <div className="hotelName"><h1><b>Silver Spoon</b></h1></div>
-      <div className="roomDetails">
-        <div className="room">
-          <h2 className="title">B1.1</h2>
-          <h3 className="maxPeople">2</h3>
-          <h3 className="desc">King Size bed,1 bathroom,balcony</h3>
-        </div>
-        <div className="checkBox">
-          <input class="checkBox1" type="checkbox" name="checkbox" id="" />
-        </div>
+      <p v-if="flag">{{ hotelName() }}</p>
+      <div className="hotelName">
+        <h1>
+          <b>{{ name }}</b>
+        </h1>
       </div>
-      <div className="roomDetails">
+      <div v-for="room in roomArray" :key="room" className="roomDetails">
         <div className="room">
-          <h2 className="title">B1.1</h2>
-          <h3 className="maxPeople">2</h3>
-          <h3 className="desc">King Size bed,1 bathroom,balcony</h3>
-        </div>
-        <div className="checkBox">
-          <input class="checkBox1" type="checkbox" name="checkbox" id="" />
-        </div>
-      </div>
-      <div className="roomDetails">
-        <div className="room">
-          <h2 className="title">B1.1</h2>
-          <h3 className="maxPeople">2</h3>
-          <h3 className="desc">King Size bed,1 bathroom,balcony</h3>
-        </div>
-        <div className="checkBox">
-          <input class="checkBox1" type="checkbox" name="checkbox" id="" />
-        </div>
-      </div>
-      <div className="roomDetails">
-        <div className="room">
-          <h2 className="title">B1.1</h2>
-          <h3 className="maxPeople">2</h3>
-          <h3 className="desc">King Size bed,1 bathroom,balcony</h3>
+          <h2 className="title">Title-{{ room.title }}</h2>
+          <h3 className="maxPeople">Capacity-{{ room.maxPeople }}</h3>
+          <h3 className="price">Price- ${{ room.price }}</h3>
+          <h4 className="desc">{{ room.desc }}</h4>
+          <!-- <h3 className="desc">King Size bed,1 bathroom,balcony</h3> -->
         </div>
         <div className="checkBox">
           <input class="checkBox1" type="checkbox" name="checkbox" id="" />
@@ -52,9 +29,40 @@
 <script>
 export default {
   name: "RoomPage",
+  data() {
+    return {
+      flag: true,
+      name: "Silver Spoon",
+      roomArray: [],
+    };
+  },
   methods: {
     reserve() {
       this.$router.push({ path: "/", replace: true });
+    },
+    hotelName() {
+      this.flag = false;
+      this.name = localStorage.getItem("name");
+      const roomLength = localStorage.getItem("roomLength");
+      console.log(roomLength);
+
+      for (let i = 0; i < roomLength - 1; i++) {
+        let title = localStorage.getItem(`roomNumber${i}title`);
+        let price = localStorage.getItem(`roomNumber${i}price`);
+        let maxPeople = localStorage.getItem(`roomNumber${i}maxPeople`);
+        let desc = localStorage.getItem(`roomNumber${i}desc`);
+        let roomObj = {
+          title,
+          price,
+          maxPeople,
+          desc,
+        };
+        console.log(roomObj);
+        this.roomArray.push(roomObj);
+      }
+      const roomNumber1title = localStorage.getItem("roomNumber1title");
+      console.log(this.roomArray);
+      console.log(roomNumber1title);
     },
   },
 };
@@ -74,10 +82,10 @@ export default {
   flex-direction: column;
 }
 
-.reservebtn:hover{
-    background-color: black;
-    border: 2px solid white;
-    color: #fff;
+.reservebtn:hover {
+  background-color: black;
+  border: 2px solid white;
+  color: #fff;
 }
 .roomDetails {
   display: flex;
@@ -91,15 +99,15 @@ export default {
   width: 20px;
   height: 20px;
 }
-.reservebtn{
-    border: none;
+.reservebtn {
+  border: none;
   padding: 10px 20px;
   background-color: #0071c2;
   color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  width:64vh;
+  width: 64vh;
   font-size: larger;
 }
 </style>

@@ -177,15 +177,34 @@ export default {
       const _id = localStorage.getItem('_id');
       const result = await axios.get(`http://localhost:5000/hotels/room/${_id}`);
       console.log("Data clicking on current hotel function *****");
-      console.log(result.data[0]);
-      const title= result.data[0].title;
-      const desc= result.data[0].desc;
-      const maxPeople= result.data[0].maxPeople;
-      const price= result.data[0].title.price;
-      localStorage.setItem('title' , title);
-      localStorage.setItem('desc' , desc);
-      localStorage.setItem('maxPeople' , maxPeople);
-      localStorage.setItem('price' , price);
+    //   console.log(result.data);
+      const hotelRooms = result.data;
+      let room;
+      for(let room in hotelRooms){
+        console.log(hotelRooms[room].title);
+        console.log(hotelRooms[room].price);
+        console.log(hotelRooms[room].maxPeople);
+        console.log(hotelRooms[room].desc);
+        localStorage.setItem(`roomNumber${room}title` ,hotelRooms[room].title);
+        localStorage.setItem(`roomNumber${room}price` ,hotelRooms[room].price);
+        localStorage.setItem(`roomNumber${room}maxPeople` ,hotelRooms[room].maxPeople);
+        localStorage.setItem(`roomNumber${room}desc` ,hotelRooms[room].desc);
+      console.log("RoomLength is : ",room);
+      localStorage.setItem('roomLength',Number.parseInt(room)+2);
+
+
+      }
+      console.log("After for loop ****");
+      console.log(room);
+    //   localStorage.setItem('roomsDetails',(result.data));
+    //   const title= result.data[0].title;
+    //   const desc= result.data[0].desc;
+    //   const maxPeople= result.data[0].maxPeople;
+    //   const price= result.data[0].title.price;
+    //   localStorage.setItem('title' , title);
+    //   localStorage.setItem('desc' , desc);
+    //   localStorage.setItem('maxPeople' , maxPeople);
+    //   localStorage.setItem('price' , price);
 
     },  
 
