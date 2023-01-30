@@ -68,7 +68,7 @@
                 />
               </div>
 
-              <button @click="hotelByCity()" className="btnSearch">Search</button>
+              <button @click="hotelByCity()" className="btnSearch"><b>Search</b></button>
             </div>
           </div>
         </div>
@@ -225,8 +225,14 @@ export default {
   color: white;
   border: none;
   width: 100%;
-  font-weight: 500;
+  font-weight: 1500;
   cursor: pointer;
+  font-size: large;
+}
+.btnSearch:hover{
+  background-color: black;
+  border: 2px solid white;
+  color: #fff;
 }
 .flex {
   display: flex;

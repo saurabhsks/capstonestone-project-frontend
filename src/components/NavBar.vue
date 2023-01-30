@@ -69,8 +69,9 @@ export default {
   cursor: pointer;
   color: #003580;
 }
-.navButton button:hover{
+.navButton:hover{
   background-color: black;
   border: 2px solid white;
+  color: #fff;
 }
 </style>

@@ -46,4 +46,9 @@ export default{
     border-radius: 5px;
     cursor: pointer;
   }
+  .mailInputContainer>button:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
+  }
 </style>

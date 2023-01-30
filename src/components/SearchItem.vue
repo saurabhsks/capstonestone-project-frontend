@@ -172,4 +172,9 @@ export default {
   cursor: pointer;
   border-radius: 5px;
 }
+.siCheckButton:hover{
+  background-color: black;
+  border: 2px solid white;
+  color: #fff;
+}
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div className="page">
     <div className="roomPage">
+        <div className="hotelName"><h1><b>Silver Spoon</b></h1></div>
       <div className="roomDetails">
         <div className="room">
           <h2 className="title">B1.1</h2>
@@ -72,6 +73,11 @@ export default {
   flex-direction: column;
 }
 
+.reservebtn:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
+}
 .roomDetails {
   display: flex;
   justify-content: center;

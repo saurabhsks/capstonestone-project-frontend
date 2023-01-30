@@ -176,6 +176,7 @@ export default {
       
       const _id = localStorage.getItem('_id');
       const result = await axios.get(`http://localhost:5000/hotels/room/${_id}`);
+      console.log("Data clicking on current hotel function *****");
       console.log(result.data[0]);
       const title= result.data[0].title;
       const desc= result.data[0].desc;
@@ -265,7 +266,11 @@ export default {
   border-radius: 5px;
   cursor: pointer;
 }
-
+.bookNow:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
+}
 .hotelDetails {
   display: flex;
   justify-content: space-between;
@@ -312,8 +317,9 @@ export default {
   cursor: pointer;
   border-radius: 5px;
 }
-.rbtn :hover{
+.rbtn:hover{
     background-color: black;
-    border: 2px solid white;
+  border: 2px solid white;
+  color: #fff;
 }
 </style>

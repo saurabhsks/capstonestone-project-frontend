@@ -90,5 +90,9 @@ export default {
   cursor: pointer;
   font-weight: bold;
 }
-
+.register .btn:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
+}
 </style>

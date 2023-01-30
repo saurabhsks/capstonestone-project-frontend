@@ -6,7 +6,7 @@
     <input type="password" v-model="password" placeholder="Enter Password" />
     <br />
     <div class="btn">
-      <button @click="login()">Login</button>
+      <button @click="login()" className="lbtn">Login</button>
     </div>
   </div>
   <router-view />
@@ -72,6 +72,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .btn button {
   width: 32%;
   height: 40px;
@@ -80,5 +81,16 @@ export default {
   color: #fff;
   cursor: pointer;
   font-weight: bold;
+  font-size: large;
+}
+.lbtn:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
+}
+.btn:hover{
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
 }
 </style>
