@@ -28,7 +28,7 @@
         <button>8.9</button>
       </div>
       <div className="siDetailTexts">
-        <span className="siPrice">${{item.cheapestPrice}}</span>
+        <span className="siPrice">₹{{item.cheapestPrice}}</span>
         <span className="siTaxOp">Includes taxes and fees</span>
         <button @click="seeRooms($event)" className="siCheckButton">See availability</button>
       </div>

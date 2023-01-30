@@ -11,7 +11,7 @@
         <div className="room">
           <h2 className="title">Title-{{ room.title }}</h2>
           <h3 className="maxPeople">Capacity-{{ room.maxPeople }}</h3>
-          <h3 className="price">Price- ${{ room.price }}</h3>
+          <h3 className="price">Price- ₹{{ room.price }}</h3>
           <h4 className="desc">{{ room.desc }}</h4>
           <!-- <h3 className="desc">King Size bed,1 bathroom,balcony</h3> -->
         </div>

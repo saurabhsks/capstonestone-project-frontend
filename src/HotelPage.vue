@@ -130,7 +130,7 @@
               Located in the real heart of the city, this property has an
               excellent location score of 9.8!
             </span>
-            <h2>${{ cheapestPrice }}</h2>
+            <h2>₹{{ cheapestPrice }}</h2>
             <button @click="bookNow()" className="rbtn" >Reserve or Book Now!</button>
           </div>
         </div>
