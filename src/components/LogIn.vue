@@ -1,4 +1,5 @@
 <template>
+    <div className="loginbg">
   <h1 style="text-align: center">Login</h1>
   <div class="login">
     <input type="text" v-model="username" placeholder="Enter Username" />
@@ -9,6 +10,7 @@
       <button @click="login()" className="lbtn">Login</button>
     </div>
   </div>
+</div>
   <router-view />
 </template>
 
@@ -59,11 +61,16 @@ export default {
   margin-left: auto;
   border: 1px solid skyblue;
 }
+.loginbg{
+    height:100vh;
+    background-size:cover;
+    background-image: url(https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
 .btn {
   width: 33.5%;
   height: 40px;
   border: 1px solid skyblue;
-  background: skyblue;
+  background: rgb(13, 227, 17);
   color: #fff;
   cursor: pointer;
   margin-right: auto;
@@ -72,12 +79,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
 .btn button {
-  width: 32%;
+  width: 100%;
   height: 40px;
   border: 1px solid skyblue;
-  background: skyblue;
+  background: rgb(20, 226, 37);
   color: #fff;
   cursor: pointer;
   font-weight: bold;
