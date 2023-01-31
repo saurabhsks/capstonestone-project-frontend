@@ -92,7 +92,7 @@ export default {
   justify-content: center;
   align-items: center;
   background: rgba(6, 6, 6, 0.5);
-  width: 20%;
+  width: 32%;
   font-size:80%;
   border-radius: 10px;
   border:1px solid rgba(255,255,255,0.3);
