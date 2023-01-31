@@ -98,6 +98,8 @@ export default {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left:2%;
+  margin-right:2%;
 }
 
 .headerListItem.active {
