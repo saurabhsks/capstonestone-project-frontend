@@ -49,6 +49,7 @@ export default{
     justify-content: space-between;
     gap: 20px;
     z-index: 1;
+    margin-top: 3%;
   }
 
   .featuredItem{

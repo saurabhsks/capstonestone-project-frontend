@@ -86,9 +86,9 @@ export default {
 
 .headerList {
   display: flex;
-  gap: 40px;
-  margin-bottom: 50px;
-  font-size: 80%;
+  gap: 5%;
+  margin-bottom: 5%;
+  font-size: 60%;
 }
 
 .headerListItem {
