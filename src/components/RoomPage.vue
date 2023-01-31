@@ -93,7 +93,7 @@ export default {
   align-items: center;
   background: rgba(6, 6, 6, 0.5);
   width: 32%;
-  font-size:18px;
+  font-size:80%;
   border-radius: 10px;
   border:1px solid rgba(255,255,255,0.3);
   box-shadow:2px 2px 15px
