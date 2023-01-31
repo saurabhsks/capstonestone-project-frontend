@@ -12,7 +12,7 @@
         </div>
         <div className="headerListItem">
           <h1><i class="fa-solid fa-car"></i></h1>
-          <span style="font-size: 17px">Car Rentals</span>
+          <span style="font-size: 17px">Car </span>
         </div>
         <div className="headerListItem">
           <h1><i class="fa-solid fa-motorcycle"></i></h1>
@@ -20,7 +20,7 @@
         </div>
         <div className="headerListItem">
           <h1><i class="fa-solid fa-taxi"></i></h1>
-          <span style="font-size: 17px">Airport Taxis</span>
+          <span style="font-size: 17px"> Taxi</span>
         </div>
       </div>
       <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>

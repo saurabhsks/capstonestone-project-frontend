@@ -63,7 +63,10 @@ export default {
 * {
   font-family: "Nunito", sans-serif;
 }
-
+.first{
+  margin-right:0;
+  align-items: center;
+}
 .homeContainer {
   margin-top: 50px;
   display: flex;

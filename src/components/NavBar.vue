@@ -63,9 +63,10 @@ export default {
 }
 
 .navButton{
-  margin-left: 20px;
+ margin-left: 20px;
   border: none;
   padding: 5px 10px;
+  
   cursor: pointer;
   color: #003580;
 }
