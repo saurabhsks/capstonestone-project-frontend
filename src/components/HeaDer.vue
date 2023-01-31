@@ -28,7 +28,7 @@
         Get rewarded for your travels – unlock instant savings of 10% or more
         with a free saurabhbooking account
       </p>
-      <button className="headerBtn">Sign in / Register</button>
+      <button  @click="Register()" className="headerBtn">Sign in / Register</button>
     </div>
     <!-- <div className="headerSearch">
         <div className="location">
@@ -59,10 +59,13 @@
 export default {
   name: "HeaDer",
 
-  //   methods : {
-  //     onClick(){
-  //         this.$router.push("/listbar");
-  //     }
+   methods : {
+      
+    Register(){
+      this.$router.push({path:'/signup' , replace:true})
+    }
+     // this.$router.push({path:'/signup' , replace:true})
+    },
   // }
 
   
