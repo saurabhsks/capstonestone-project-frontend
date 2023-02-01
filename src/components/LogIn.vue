@@ -14,6 +14,7 @@
         <div class="btn">
           <button @click="login()" className="lbtn">Login</button>
         </div>
+        <h2 class="desc">Not yet signup? do here </h2>
         <div class="signup">
             <button @click="signup()" className="sbtn">SignUp</button>
           </div>
@@ -76,6 +77,11 @@ export default {
   padding-bottom: 5%;
   margin-left: 10%;
   margin-right: 10%;
+}
+.desc{
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
 }
 .login input {
   width: 30%;
@@ -143,7 +149,7 @@ export default {
     font-weight: bold;
     font-size: large;
 
-    margin-top: 5%;
+    
   }
   
   .sbtn button {
