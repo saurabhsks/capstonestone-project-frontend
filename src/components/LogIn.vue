@@ -14,6 +14,9 @@
         <div class="btn">
           <button @click="login()" className="lbtn">Login</button>
         </div>
+        <div class="signup">
+            <button @click="signup()" className="sbtn">SignUp</button>
+          </div>
       </div>
     </div>
   </div>
@@ -53,6 +56,10 @@ export default {
         console.log("Please enter valid data");
       }
     },
+
+    signup(){
+      this.$router.push({path:'/signup' , replace:true})
+    }
   },
 };
 </script>
@@ -117,4 +124,42 @@ export default {
   border: 2px solid white;
   color: #fff;
 }
+
+
+
+.sbtn {
+    width: 33.5%;
+    height: 40px;
+    border: 1px solid skyblue;
+    background: rgb(20, 226, 37);
+    color: #fff;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-size: large;
+
+    margin-top: 5%;
+  }
+  
+  .sbtn button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid skyblue;
+    background: rgb(20, 226, 37);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    
+  }
+  .sbtn:hover {
+    background-color: black;
+    border: 2px solid white;
+    color: #fff;
+  }
 </style>
